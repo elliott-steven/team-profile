@@ -1,0 +1,23 @@
+{
+  "name": "team-profile",
+  "version": "1.0.0",
+  "description": "generate profile page with teams info",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliott-steven/team-profile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elliott-steven/team-profile/issues"
+  },
+  "homepage": "https://github.com/elliott-steven/team-profile#readme"
+}
