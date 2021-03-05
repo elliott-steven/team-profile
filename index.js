@@ -6,7 +6,7 @@ const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 
-let employee = [];
+let empArray = {manager,engineer,intern};
 let manager = [];
 let engineer = [];
 let intern = [];
@@ -34,15 +34,17 @@ function Prompt() {
             {
                 type: 'list',
                 name: 'role',
-                message: "What is the employee's role on this team?"
-            choices: ['Manager', 'Engineer', 'Intern']
+                message: "What is the employee's role on this team?",
+                choices: ['Manager', 'Engineer', 'Intern']
             },
         ])
 
         .then(({ employee, id, email, role }) => {
 
             if (role === "Manager") {
+
                 return inquirer
+
                     .prompt([{
                         type: 'text',
                         name: 'officeNum',
@@ -55,6 +57,60 @@ function Prompt() {
                         default: false
                     }
                     ])
+                    .then(({officeNum, anotherEmp}) => {
+                        manager.push(new Manager(employee, id, email, officeNum))
+                        if(anotherEmp) {
+                            return Prompt();
+                        }
+                    })
+            }
+
+            else if (role === "Engineer") {
+
+                return inquirer
+
+                .prompt([{
+                    type: 'text',
+                    name: 'github',
+                    message: "What is your GitHub username? (without the @)"
+                },
+                {
+                    type: 'confirm',
+                    name: 'anotherEmp',
+                    message: "Would you like to add another employee?",
+                    default: false
+                }
+                ])
+                .then(({officeNum, anotherEmp}) => {
+                    engineer.push(new Engineer(employee, id, email, github))
+                    if(anotherEmp) {
+                        return Prompt();
+                    }
+                })
+            }
+
+            else if (role === "Intern") {
+
+                return inquirer
+                
+                .prompt([{
+                    type: 'text',
+                    name: 'college',
+                    message: "What college is the Intern attending or has attended?"
+                },
+                {
+                    type: 'confirm',
+                    name: 'anotherEmp',
+                    message: "Would you like to add another employee?",
+                    default: false
+                }
+                ])
+                .then(({officeNum, anotherEmp}) => {
+                    intern.push(new Intern(employee, id, email, college))
+                    if(anotherEmp) {
+                        return Prompt();
+                    }
+                })
             }
 
         })
