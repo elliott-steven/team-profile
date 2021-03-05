@@ -1,10 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-const Employee = require("./lib/employee")
-const Manager = require("./lib/manager");
-const Engineer = require("./lib/engineer");
-const Intern = require("./lib/intern");
+const Employee = require("./lib/Employee")
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 let empArray = {manager,engineer,intern};
 let manager = [];
@@ -47,7 +47,7 @@ function Prompt() {
 
                     .prompt([{
                         type: 'text',
-                        name: 'officeNum',
+                        name: 'officeNumber',
                         message: "What is your office phone number?"
                     },
                     {
@@ -95,8 +95,8 @@ function Prompt() {
                 
                 .prompt([{
                     type: 'text',
-                    name: 'college',
-                    message: "What college is the Intern attending or has attended?"
+                    name: 'school',
+                    message: "What school is the Intern attending or has attended?"
                 },
                 {
                     type: 'confirm',
