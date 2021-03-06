@@ -43,11 +43,12 @@ const createCard = userData => {
         `
         
         return internCard
-    });
-
+    })
+    return [manager,engineer,intern]
 }
 
 module.exports = templateData => {
+    console.log(templateData);
 
     return `
     <!DOCTYPE html>

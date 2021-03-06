@@ -49,7 +49,7 @@ function Prompt() {
 
                     .prompt([{
                         type: 'text',
-                        name: 'officeNumber',
+                        name: 'officeNum',
                         message: "What is your office phone number?"
                     },
                     {
@@ -83,7 +83,7 @@ function Prompt() {
                     default: false
                 }
                 ])
-                .then(({officeNum, anotherEmp}) => {
+                .then(({github, anotherEmp}) => {
                     engineer.push(new Engineer(employee, id, email, github))
                     if(anotherEmp) {
                         return Prompt();
@@ -107,8 +107,8 @@ function Prompt() {
                     default: false
                 }
                 ])
-                .then(({officeNum, anotherEmp}) => {
-                    intern.push(new Intern(employee, id, email, college))
+                .then(({school, anotherEmp}) => {
+                    intern.push(new Intern(employee, id, email, school))
                     if(anotherEmp) {
                         return Prompt();
                     }
@@ -124,5 +124,5 @@ Prompt ()
 })
 
 .then(pagehtml => {
-    return fs.writeFile(pagehtml)
+    return writeFile(pagehtml)
 })
