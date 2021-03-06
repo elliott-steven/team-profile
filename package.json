@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/elliott-steven/team-profile/issues"
   },
-  "homepage": "https://github.com/elliott-steven/team-profile#readme"
+  "homepage": "https://github.com/elliott-steven/team-profile#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
 }

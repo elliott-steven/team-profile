@@ -1,15 +1,17 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-const Employee = require("./lib/Employee")
+const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const createHtml = require('./src/html-template');
+const writeFile = require('./src/create-site');
 
-let empArray = {manager,engineer,intern};
 let manager = [];
 let engineer = [];
 let intern = [];
+let empArray = {manager,engineer,intern};
 
 function Prompt() {
 
@@ -115,3 +117,12 @@ function Prompt() {
 
         })
 }
+
+Prompt ()
+.then(userData => {
+    return createHtml(empArray)
+})
+
+.then(pagehtml => {
+    return fs.writeFile(pagehtml)
+})
