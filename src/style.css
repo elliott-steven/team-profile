@@ -1,0 +1,28 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.head {
+    text-align: center;
+    background-color: dimgrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.name {
+text-align: center;
+}
+
+.title {
+
+}
+
+.card {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container {
+    align-content: center;
+}

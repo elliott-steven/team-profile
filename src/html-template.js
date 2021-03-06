@@ -1,44 +1,44 @@
 const createCard = userData => {
 
-    const manager = userData.manager.map(function(job) {
+    const manager = userData.manager.map(function(card) {
         
         let managerCard = `
-        <div class="card">
-            <h1>${job.name}</h1>
-            <h3>Manager</h3>
-            <p>ID: ${job.id}</p>
-            <p>Email: <a href="mailto:${job.email}">${job.email}</a></p>
-            <p>Office Number: ${job.officeNumber}</p>
+        <div class="card border-primary mb-3" style="max-width: 18rem;">
+            <h1 class="name">${card.name}</h1>
+            <h3 class="title">Manager</h3>
+            <p>ID: ${card.id}</p>
+            <p>Email: <a href="mailto:${card.email}">${card.email}</a></p>
+            <p>Office Number: ${card.officeNumber}</p>
         </div>
         `
 
         return managerCard
     });
 
-    const engineer = userData.engineer.map(function(job) {
+    const engineer = userData.engineer.map(function(card) {
         
         let engineerCard = `
-        <div class="card">
-            <h1>${job.name}</h1>
-            <h3>Engineer</h3>
-            <p>ID: ${job.id}</p>
-            <p>Email: <a href="mailto:${job.email}">${job.email}</a></p>
-            <p>GitHub: <a href="https://github.com/${job.github}">@${job.github}</a></p>
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+            <h1 class="name">${card.name}</h1>
+            <h3 class="title">Engineer</h3>
+            <p>ID: ${card.id}</p>
+            <p>Email: <a href="mailto:${card.email}">${card.email}</a></p>
+            <p>GitHub: <a href="https://github.com/${card.github}">@${card.github}</a></p>
         </div>
         `
         
         return engineerCard
     });
 
-    const intern = userData.intern.map(function(job) {
+    const intern = userData.intern.map(function(card) {
         
         let internCard = `
-        <div class="card">
-            <h1>${job.name}</h1>
-            <h3>Intern</h3>
-            <p>ID: ${job.id}</p>
-            <p>Email: <a href="mailto:${job.email}">${job.email}</a></p>
-            <p>School: ${job.school}</p>
+        <div class="card border-warning mb-3" style="max-width: 18rem;">
+            <h1 class="name">${card.name}</h1>
+            <h3 class="title">Intern</h3>
+            <p>ID: ${card.id}</p>
+            <p>Email: <a href="mailto:${card.email}">${card.email}</a></p>
+            <p>School: ${card.school}</p>
         </div>
         `
         
@@ -66,13 +66,17 @@ module.exports = templateData => {
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <!-- This is my stylesheet-->
-        <link rel="stylesheet" type="text/css" href="./src/style.css">
+        <link rel="stylesheet" type="text/css" href="../src/style.css">
     </head>
     <body>
         <header>
-            <h1>My Team</h1>
+            <h1 class="head">My Team</h1>
         </header>
-        ${createCard(templateData)}
+        <div class="container">
+            <div class="card-group">
+            ${createCard(templateData)}
+            </div>
+        </div>
     </body>
     </html>
     `
