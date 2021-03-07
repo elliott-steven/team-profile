@@ -37,12 +37,13 @@ SO THAT I have quick access to their emails and GitHub profiles
 
 Here is a screenshot of the output html.
 [Output Html Screenshot](./media/homework10.png)
+[Video Walkthrough](https://drive.google.com/file/d/1jQphRXk7bBIcZoYBBL40xA_oCwFYA72d/view)
 
 ## Installation
 
 Download the git repository to your hard drive. [Git Repository](https://github.com/elliott-steven/team-profile.git)
 
-The application requires [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. You can install then by running the following commands:
+The application requires [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. You can install then by running the following commands from the root dir of the project:
 
 npm install jest
 THEN
