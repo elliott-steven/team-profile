@@ -1,5 +1,7 @@
+//required install
 const fs = require('fs');
 
+//this will write the output html
 const writeFile = fileContent => {
 
     return new Promise((resolve,reject) => {

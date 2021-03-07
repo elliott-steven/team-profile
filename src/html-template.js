@@ -1,3 +1,4 @@
+//creates a card for each element using the userData entered by prompts
 const createCard = userData => {
 
     const manager = userData.manager.map(function(card) {
@@ -48,8 +49,9 @@ const createCard = userData => {
 }
 
 module.exports = templateData => {
-    console.log(templateData);
+    //console.log(templateData);
 
+    //template for the output file
     return `
     <!DOCTYPE html>
     <html lang="en">

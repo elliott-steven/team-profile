@@ -13,6 +13,7 @@ let engineer = [];
 let intern = [];
 let empArray = {manager,engineer,intern};
 
+// These are the prompt questions for each element
 function Prompt() {
 
     return inquirer
@@ -118,6 +119,7 @@ function Prompt() {
         })
 }
 
+//places user data into array and the writes the file
 Prompt ()
 .then(userData => {
     return createHtml(empArray)
