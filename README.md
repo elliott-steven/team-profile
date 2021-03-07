@@ -36,9 +36,11 @@ SO THAT I have quick access to their emails and GitHub profiles
 ## Mock-Up
 
 Here is a screenshot of the output html.
-[./media/homework10.png]
+[Output Html Screenshot](./media/homework10.png)
 
 ## Installation
+
+Download the git repository to your hard drive. [Git Repository](https://github.com/elliott-steven/team-profile.git)
 
 The application requires [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. You can install then by running the following commands:
 
