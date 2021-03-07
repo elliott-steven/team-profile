@@ -36,7 +36,7 @@ SO THAT I have quick access to their emails and GitHub profiles
 ## Mock-Up
 
 Here is a screenshot of the output html.
-(./media/homework10.png)
+[./media/homework10.png]
 
 ## Installation
 
