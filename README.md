@@ -51,3 +51,5 @@ npm install inquirer
 The application can be invoked by using the following command:
 
 node index.js
+
+The output file can he located [here](./dist/index.html)
